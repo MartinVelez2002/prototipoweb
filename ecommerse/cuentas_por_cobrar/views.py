@@ -27,13 +27,15 @@ def pago_deuda (request):
 
 #FIN DE CUENTAS POR COBRAR
 
-
+#PANTALLA DEL INICIO
 def inicio(request):
     data = {
         'titulo':"Inicio"
     }
     return render(request,'base.html',data)
+#FIN PANTALLA DE INICIO
 
+#MÓDULO DE VENTAS
 def articulo(request):
   return HttpResponse(html_base+
     """<h2>Mantenimiento de Articulo</h2>
@@ -44,3 +46,24 @@ def venta(request):
         'titulo': "Inicio"
   }
   return render(request, "ventas/ventas.html",data)
+
+def cliente(request):
+  data = {
+      'titulo':'GESTION DE CLIENTES',
+      'crear_url': '/crearcliente',
+      'listar_url': '/cliente',
+  }
+  return render(request, "ventas/clientes/listCliente.html",data)
+
+def crearCliente(request):
+  data = {
+      'titulo':'MANTENIMIENTO DE CLIENTES',
+      'crear_url':'/crearcliente',
+      'action':'add',
+      'listar_url': '/cliente',
+  }
+  return render(request, "ventas/clientes/formCliente.html",data)
+
+
+
+#FIN DEL MÓDULO DE VENTAS

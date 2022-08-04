@@ -47,12 +47,6 @@ th, td {
     }
 }
 
-.fondo {
-    background-color: #EDBB99 ;
-    border-radius: 15px;
-    margin-top:2%;
-    width: 800px;
-}
 
 .fondo2 {
     background-color: #90A4AE  ;
@@ -83,12 +77,7 @@ th, td {
         margin-top:2%;
         width: 600px;
     }
-    .fondo {
-        background-color:#EDBB99;
-        border-radius: 15px;
-        margin-top:2%;
-        width: 600px;
-    }
+
     .fondo2 {
     background-color: #90A4AE  ;
     border-radius: 15px;
@@ -102,12 +91,6 @@ th, td {
 @media(max-width: 611px){
     .fondo3 {
         background-color: #AED6F1 ;
-        border-radius: 15px;
-        margin-top: 2%;
-        width: 400px;
-    }
-    .fondo {
-        background-color:#EDBB99;
         border-radius: 15px;
         margin-top: 2%;
         width: 400px;
