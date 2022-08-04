@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/estilo.css'  %}"> {% endblock %}
+{% block main %}
+    <div class="container-lg tablaCabecera">
+
+       <h2 class="nom_empr"> {{ nombre }} </h2>
+       <h5> RUC: 0942128505 </h5>
+       <h5> Dirección: Av. Tarqui y Brasil </h5>
+       <h5> Fecha de emisión del documento: 2/08/2022 </h5>
+
+    </div>
+
+    <div class="container-lg tablaCobros">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Código del Documento</th>
+              <th scope="col">Fecha de Inicio del cobro</th>
+              <th scope="col">Fecha de la finalización del cobro</th>
+              <th scope="col">Monto a cobrar</th>
+              <th scope="col">Saldo actual</th>
+              <th scope="col"> Estado </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>6001</td>
+              <td>12/8/2022</td>
+              <td>13/8/2022</td>
+              <td>$4500</td>
+              <td>$1000</td>
+              <td>Activa</td>
+              <td><a href="{% url 'pago' %}"> <button type="button" class="btn btn-danger btn-sm"> Pago </button> </a> </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>4575</td>
+              <td>12/8/2022</td>
+              <td>13/8/2022</td>
+              <td>$6500</td>
+              <td>$2000</td>
+              <td>Activa</td>
+              <td><a href="{% url 'pago' %}"> <button type="button" class="btn btn-danger btn-sm"> Pago </button> </a> </td>
+            </tr>
+            <tr>
+              <td >3</td>
+              <td>6002</td>
+              <td>12/8/2022</td>
+              <td>13/8/2022</td>
+              <td>$5500</td>
+              <td>$2000</td>
+              <td>Activa</td>
+              <td><a href="{% url 'pago' %}"> <button type="button" class="btn btn-danger btn-sm"> Pago </button> </a> </td>
+
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="container-lg cent" >
+        <a href="{% url 'interes' %}"> <button type="button" class="btn btn-warning btn-lg "> Calcular Interés </button> </a>
+    </div>
+
+{% endblock %}

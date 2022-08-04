@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/estilo.css'  %}"> {% endblock %}
+{% block main %}
+
+    <div class="container-lg" >
+        <div class="botonretorno" >
+            <a href="{% url 'cuenta'  %}" > <button type="button" class="btn btn-outline-secondary"> REGRESAR </button> </a>
+        </div>
+    </div>
+
+    <div class="container-lg fondo3">
+
+                <form>
+                    <div class="mb-3">
+                        <h4> <label class="form-label"> Monto a abonar </label> </h4>
+                        <input class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <h4> <label class="form-label"> Fecha del cobro </label> </h4>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="mb-3 ">
+                        <h4> <label class="form-label"> Saldo del usuario </label>  </h4>
+                        <input class="form-control" placeholder="15000">
+                    </div>
+                </form>
+
+{% endblock %}
+

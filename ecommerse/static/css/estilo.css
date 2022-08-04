@@ -1,0 +1,144 @@
+th, td {
+    text-align: center;
+}
+.tablaCobros{
+    margin-top: 5%;
+    width: 900px;
+    background-color: #AEB6BF;
+    border-radius: 10px;
+}
+@media(max-width: 904px){
+    .tablaCobros{
+        margin-top: 5%;
+        width: 700px;
+    }
+}
+
+.cent{
+    width: fit-content;
+}
+
+.tablaCabecera{
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.nom_empr {
+    text-align: right;
+}
+
+
+.botonretorno{
+    margin-left: 80%;
+    margin-right: 15%;
+}
+@media(max-width: 476px){
+    .botonretorno{
+        margin-left: 73%;
+        margin-right: 15%;
+    }
+}
+
+@media(max-width: 608px){
+    .botonretorno{
+        margin-left: 70%;
+        margin-right: 15%;
+    }
+}
+
+.fondo {
+    background-color: #EDBB99 ;
+    border-radius: 15px;
+    margin-top:2%;
+    width: 800px;
+}
+
+.fondo2 {
+    background-color: #90A4AE  ;
+    border-radius: 15px;
+    width: 600px;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.fondo3 {
+    background-color:#AED6F1 ;
+    border-radius: 15px;
+    margin-top:2%;
+    padding-bottom:5px;
+    padding-right:30px;
+    width: 800px;
+}
+
+.cent{
+    width: fit-content;
+    margin: 1% auto;
+}
+
+@media(max-width: 803px){
+    .fondo3{
+        background-color:#AED6F1 ;
+        border-radius: 15px;
+        margin-top:2%;
+        width: 600px;
+    }
+    .fondo {
+        background-color:#EDBB99;
+        border-radius: 15px;
+        margin-top:2%;
+        width: 600px;
+    }
+    .fondo2 {
+    background-color: #90A4AE  ;
+    border-radius: 15px;
+    width: 600px;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+}
+@media(max-width: 611px){
+    .fondo3 {
+        background-color: #AED6F1 ;
+        border-radius: 15px;
+        margin-top: 2%;
+        width: 400px;
+    }
+    .fondo {
+        background-color:#EDBB99;
+        border-radius: 15px;
+        margin-top: 2%;
+        width: 400px;
+    }
+    .fondo2 {
+    background-color: #90A4AE  ;
+    border-radius: 15px;
+    width: 400px;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+}
+
+
+.form-control{
+    display:block;
+    width: 100%;
+    margin: 1%;
+}
+
+
+h1{
+    text-align: center;
+}
+
+.bot{
+    width: fit-content;
+    margin: 2% auto;
+}
+
+.tabla2{
+    padding-bottom: 2%;
+}
