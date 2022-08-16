@@ -23,6 +23,7 @@ urlpatterns = [
     path('interes/',calculoInteres, name='interes'),
     path('cuentasCobrar/', cuentasCobrar, name='cuenta'),
     path('pagoDeuda/', pago_deuda, name='pago'),
+    path('crear/',crearCrobro, name= 'crear'),
 
     path('', inicio, name='inicio'),
     path('articulo/', articulo, name='articulo'),

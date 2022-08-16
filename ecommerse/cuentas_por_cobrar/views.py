@@ -15,7 +15,7 @@ html_base = """
 def cuentasCobrar (request):
     data = {
     'titulo':'Cuentas por Cobrar',
-    'nombre': 'LA MEJOR EMPRESA',
+    'nombre': 'CASM',
     }
     return render(request, 'cuentas_por_cobrar/cuentasCobrar.html',data)
 
@@ -24,6 +24,14 @@ def calculoInteres (request):
 
 def pago_deuda (request):
     return render(request, 'cuentas_por_cobrar/cobro_deuda.html')
+
+def crearCrobro(request):
+    data = {
+        'titulo': 'Cuentas por Cobrar',
+        'nombre': 'CASM',
+    }
+    return render(request, 'cuentas_por_cobrar/creaCobro.html', data)
+
 
 #FIN DE CUENTAS POR COBRAR
 
