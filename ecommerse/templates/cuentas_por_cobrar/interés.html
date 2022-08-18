@@ -5,7 +5,7 @@
 
     <div class="container-lg" >
         <div class="botonretorno" >
-            <a href="{% url 'cuenta'  %}" > <button type="button" class="btn btn-dark"> REGRESAR </button> </a>
+            <a href="{% url 'crear'  %}" > <button type="button" class="btn btn-dark"> REGRESAR </button> </a>
         </div>
     </div>
 
@@ -32,12 +32,12 @@
 
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 ">
             <div class="col cent">
-                    <button type="button" class="btn btn-success btn-lg"> CALCULAR <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                <button type="button" class="btn btn-success btn-lg"> CALCULAR <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
                       <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
                     </svg></button>
                 </div>
             </div>
-            <div class="col bot">
+            <div class="col cent">
                       <button type="reset" class="btn btn-danger btn-lg"> LIMPIAR <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eraser-fill" viewBox="0 0 16 16">
                       <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm.66 11.34L3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"/>
                     </svg></button>
@@ -61,10 +61,18 @@
                     <div class="mb-4 cent">
 
                         <tr>
-                            <td style="font-size:22px" > Monto a Pagar: </td>
+                            <td style="font-size:20px" > Monto a Pagar: </td>
                             <td> 1800 </td>
                         </tr>
                     </div>
+                    <div class="mb-4 cent">
+
+                        <tr>
+                            <td style="font-size:20px" > Cuota mensual </td>
+                            <td> 450 </td>
+                        </tr>
+                    </div>
+
                 </table>
 
             </div>
