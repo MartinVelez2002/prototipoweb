@@ -1,3 +1,7 @@
+body{
+    font-family: "Droid Sans Mono Slashed";
+}
+
 th, td {
     text-align: center;
 }
@@ -7,6 +11,34 @@ th, td {
     background-color: #AEB6BF;
     border-radius: 10px;
 }
+.tablapagos{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-label{
+    padding-left:1%;
+    padding-top:1%;
+}
+
+.titulos{
+    background-color: #81bcf5;
+    border-radius:15px;
+}
+
+
+.tablainteres{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    background-color: #ecf1f0;
+}
+.resul {
+    border-bottom: double;
+}
+
+
 @media(max-width: 904px){
     .tablaCobros{
         margin-top: 5%;
@@ -14,18 +46,18 @@ th, td {
     }
 }
 
-.cent{
+.cent {
     width: fit-content;
 }
 
 .tablaCabecera{
-
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-bottom-style: groove;
 }
 
 .nom_empr {
-    text-align: right;
+    text-align: center;
 }
 
 
@@ -53,7 +85,7 @@ th, td {
     width: 600px;
     padding: 1%;
     margin-top: 1%;
-    margin-bottom: 1%;
+    margin-bottom: 0.5%;
 }
 .fondo3 {
     background-color:#AED6F1 ;
@@ -106,7 +138,7 @@ th, td {
 
 .form-control{
     display:block;
-    width: 100%;
+    width: 98%;
     margin: 1%;
 }
 
