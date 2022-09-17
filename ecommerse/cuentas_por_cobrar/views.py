@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.views.generic import *
 # Create your views here.
 html_base = """
     <h1>Shopping Car</h1>
@@ -11,67 +12,43 @@ html_base = """
     </ul>
 """
 #CUENTAS POR COBRAR
+class CuentasCobrar (TemplateView):
+    template_name = "cuentas_por_cobrar/cuentasCobrar.html"
 
-def cuentasCobrar (request):
-    data = {
-    'titulo':'Cuentas por Cobrar',
-    'nombre': 'CASM',
-    }
-    return render(request, 'cuentas_por_cobrar/cuentasCobrar.html',data)
 
-def calculoInteres (request):
-    return render(request, 'cuentas_por_cobrar/interés.html')
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["titulo"] = 'Cuentas por Cobrar'
+        context["nombre"]= 'CASM'
 
-def pago_deuda (request):
-    return render(request, 'cuentas_por_cobrar/cobro_deuda.html')
 
-def crearCrobro(request):
-    data = {
-        'titulo': 'Cuentas por Cobrar',
-        'nombre': 'CASM',
-    }
-    return render(request, 'cuentas_por_cobrar/creaCobro.html', data)
+class CalculoInteres (TemplateView):
+    template_name = "cuentas_por_cobrar/interés.html"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["nombre"]= 'CASM'
+
+
+class CobroDeuda(TemplateView):
+    template_name = "cuentas_por_cobrar/cobro_deuda.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["titulo"] = 'Pago de su Deuda'
+        context["nombre"] = 'CASM'
+
+
+class CrearCobro(TemplateView):
+    template_name = "cuentas_por_cobrar/creaCobro.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["titulo"] = 'Cuentas por Cobrar'
+        context["nombre"] = 'CASM'
 
 
 #FIN DE CUENTAS POR COBRAR
 
 #PANTALLA DEL INICIO
-def inicio(request):
-    data = {
-        'titulo':"Inicio"
-    }
-    return render(request,'base.html',data)
-#FIN PANTALLA DE INICIO
-
-#MÓDULO DE VENTAS
-def articulo(request):
-  return HttpResponse(html_base+
-    """<h2>Mantenimiento de Articulo</h2>
-       <p>List de articulos</p>""")
-
-def venta(request):
-  data = {
-        'titulo': "Inicio"
-  }
-  return render(request, "ventas/ventas.html",data)
-
-def cliente(request):
-  data = {
-      'titulo':'GESTION DE CLIENTES',
-      'crear_url': '/crearcliente',
-      'listar_url': '/cliente',
-  }
-  return render(request, "ventas/clientes/listCliente.html",data)
-
-def crearCliente(request):
-  data = {
-      'titulo':'MANTENIMIENTO DE CLIENTES',
-      'crear_url':'/crearcliente',
-      'action':'add',
-      'listar_url': '/cliente',
-  }
-  return render(request, "ventas/clientes/formCliente.html",data)
-
-
-
-#FIN DEL MÓDULO DE VENTAS
+class Inicio(TemplateView):
+    template_name = "base.html"
