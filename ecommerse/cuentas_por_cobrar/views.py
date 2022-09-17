@@ -20,14 +20,14 @@ class CuentasCobrar (TemplateView):
         context = super().get_context_data(**kwargs)
         context["titulo"] = 'Cuentas por Cobrar'
         context["nombre"]= 'CASM'
-
+        return context
 
 class CalculoInteres (TemplateView):
     template_name = "cuentas_por_cobrar/interés.html"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["nombre"]= 'CASM'
-
+        return context
 
 class CobroDeuda(TemplateView):
     template_name = "cuentas_por_cobrar/cobro_deuda.html"
@@ -36,7 +36,7 @@ class CobroDeuda(TemplateView):
         context = super().get_context_data(**kwargs)
         context["titulo"] = 'Pago de su Deuda'
         context["nombre"] = 'CASM'
-
+        return context
 
 class CrearCobro(TemplateView):
     template_name = "cuentas_por_cobrar/creaCobro.html"
@@ -45,10 +45,15 @@ class CrearCobro(TemplateView):
         context = super().get_context_data(**kwargs)
         context["titulo"] = 'Cuentas por Cobrar'
         context["nombre"] = 'CASM'
-
+        return context
 
 #FIN DE CUENTAS POR COBRAR
 
 #PANTALLA DEL INICIO
 class Inicio(TemplateView):
     template_name = "base.html"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['titulo'] = "Menu Principal"
+        context['url_anterior']= '/'
+        return context
